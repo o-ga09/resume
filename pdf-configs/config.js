@@ -1,3 +1,5 @@
+const currentDate = new Date().toLocaleDateString("ja-JP");
+
 module.exports = {
   stylesheet: "./pdf-configs/style.css",
   body_class: "markdown-body",
@@ -6,11 +8,33 @@ module.exports = {
     smartypants: true,
   },
   pdf_options: {
-    "format": "A4",
-    "margin": "30mm 20mm",
-    "printBackground": true,
-    "headerTemplate": "<style>\n  section {\n    margin: 0 auto;\n    font-size: 9px;\n  }\n</style>",
-    "footerTemplate": "<section>\n  <div>\n    <span class=\"pageNumber\"></span>\n    / <span class=\"totalPages\"></span>\n  </div>\n</section>"
+    format: "A4",
+    margin: "30mm 20mm",
+    printBackground: true,
+    displayHeaderFooter: true,
+    headerTemplate: `<style>
+  .header {
+    margin: 0 auto;
+    font-size: 9px;
+    width: 100%;
+    text-align: right;
+    padding-right: 20mm;
+  }
+</style>
+<div class="header">
+  <span>生成日: ${currentDate}</span>
+</div>`,
+    footerTemplate: `<style>
+  .footer {
+    margin: 0 auto;
+    font-size: 9px;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+<div class="footer">
+  <span class="pageNumber"></span> / <span class="totalPages"></span>
+</div>`,
   },
   stylesheet_encoding: "utf-8",
 };
