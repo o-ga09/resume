@@ -1,8 +1,15 @@
-# { name } resume
+# Taichi Abe 's resume
 
-## Sample
+![textlint](https://img.shields.io/github/workflow/status/kawamataryo/resume/lint%20text?label=textlint&logo=github&color=yellow)
+![build pdf](https://img.shields.io/github/workflow/status/kawamataryo/resume/build-pdf?label=build%20pdf&logo=github)
+![create issue](https://img.shields.io/github/workflow/status/kawamataryo/resume/create%20issue?label=create%20issue&logo=github&color=orange)
+![release date](https://img.shields.io/github/release-date/kawamataryo/resume?color=blue&logo=github)
 
-https://github.com/kawamataryo/resume
+[ [English](https://github.com/o-ga09/resume) | 日本語 ]
+
+- [GitHub Pages](https://o-ga09.github.io/resume/)
+- [PDF](https://github.com/o-ga09/resume/releases)
+- [File](https://github.com/o-ga09/resume/blob/master/docs/README.md)
 
 ## Features
 
@@ -13,21 +20,19 @@ Automatic proofreading with [textlint](https://github.com/textlint/textlint).
 ```
 $ yarn lint --fix
 ```
+
 It is also automatically executed when pre-commit by [husky](https://github.com/typicode/husky).  
 proofreading rules are set with `.textlintrc`.
-
-
 
 ### 📝 Convert MD to PDF
 
 You can generate PDF with [md-to-pdf](https://www.npmjs.com/package/md-to-pdf).
 
-
 ```
 $ yarn build:pdf
 ```
 
-The output PDF can be styled as you like with CSS. Edit the `pdf-configs/style.css`.  
+The output PDF can be styled as you like with CSS. Edit the `pdf-configs/style.css`.
 
 ### 🛠 Create release
 
@@ -45,3 +50,8 @@ Automatically generate issues every three months with GitHub Actions Schedules t
 
 To change the duration or stop the job, edit `.github/workflows/create-issue.yml`.  
 To change the issue contents, edit `.github/ISSUE_TEMPLATE.md`.
+
+## Acknowledgement
+
+This Repository is foked [kawamataryo/resume](https://github.com/kawamataryo/resume) .
+Great Thanks For [@kawamataryo](https://github.com/kawamataryo)
