@@ -3,7 +3,8 @@
 body {
   font-size: 12px;
   font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  line-height: 1.4;
+  line-height: 1.5;
+  color: #333;
 }
 
 /* タイトル */
@@ -45,6 +46,7 @@ h2:nth-of-type(1), h2:nth-of-type(2), h2:nth-of-type(3) {
 h2:nth-of-type(4) {
   page-break-before: always;
   page-break-after: avoid;
+  margin-bottom: 0;
 }
 
 /* 学歴詳細セクションは新しいページから開始 */
@@ -71,39 +73,109 @@ h2:nth-of-type(8) {
   page-break-after: avoid;
 }
 
-/* h3要素の改ページ制御 */
+/* h3要素の改ページ制御と余白調整 */
 h3 {
   page-break-after: avoid;
   page-break-before: avoid;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-bottom: 10px;
+  font-size: 14px;
+  border-bottom: 1px dotted #666;
+  padding-bottom: 3px;
 }
 
-/* h4要素の改ページ制御 */
+/* h4要素の改ページ制御と余白調整 */
 h4 {
   page-break-after: avoid;
   page-break-before: avoid;
   margin-top: 15px;
   margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 5px;
+  border-left: 3px solid #666;
 }
 
 /* テーブルの改ページ制御 */
 table {
   page-break-inside: avoid;
+  break-inside: avoid;
   margin-bottom: 15px;
 }
 
-/* リストの改ページ制御 */
+/* リストの改ページ制御と余白調整 */
 ul, ol {
   page-break-inside: avoid;
+  break-inside: avoid;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* リストの項目間の余白 */
+li {
+  margin-bottom: 3px;
 }
 
 /* 技術スタックセクション全体の改ページ制御 */
-h2:nth-of-type(3) + h3,
-h2:nth-of-type(3) + h3 + ul,
-h2:nth-of-type(3) + h3 + ul + h3,
-h2:nth-of-type(3) + h3 + ul + h3 + ul {
+h2:nth-of-type(3),
+h2:nth-of-type(3) ~ h3,
+h2:nth-of-type(3) ~ ul {
   page-break-before: avoid;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  break-before: avoid;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+/* 技術スタックセクション全体を一つのブロックとして扱う */
+h2:nth-of-type(3) {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* 技術スタックセクション内のリストを一つのブロックとして扱う */
+h2:nth-of-type(3) ~ h3 + ul {
+  page-break-before: avoid;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  break-before: avoid;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+/* 特にインフラとツールのセクションが分断されないように */
+h3:nth-of-type(4), /* インフラ */
+h3:nth-of-type(4) + ul,
+h3:nth-of-type(5), /* ツール */
+h3:nth-of-type(5) + ul {
+  page-break-before: avoid;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  break-before: avoid;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+/* 各カテゴリとそのリストが一緒に表示されるようにする */
+.tech-stack-section h3,
+.tech-stack-section h3 + ul {
+  display: inline-block;
+  width: 100%;
+  page-break-before: avoid;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  break-before: avoid;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+/* インフラとツールを絶対に分割しないグループ */
+.no-break-group {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  display: inline-block;
+  width: 100%;
 }
 
 table {
@@ -116,8 +188,9 @@ table {
 td,
 th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 6px 8px;
   vertical-align: top;
+  line-height: 1.4;
 }
 
 tr:nth-child(even) {
@@ -136,19 +209,110 @@ hr {
   page-break-after: avoid;
 }
 
-/* 職務経歴の各会社セクション */
+/* 職務経歴の各会社セクション - 各会社は新しいページから開始 */
 .company-section {
+  page-break-before: always;
+  break-before: always;
   page-break-inside: avoid;
-  margin-bottom: 30px;
+  break-inside: avoid;
+  page-break-after: always;
+  break-after: always;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+/* 最初の会社セクションは「職務経歴詳細」見出しの後に続けて表示 */
+.first-company {
+  page-break-before: avoid !important;
+  break-before: avoid !important;
+}
+
+/* 新しいセクションページの開始 */
+.new-section-page {
+  page-break-before: always;
+  break-before: always;
+}
+
+/* 技術スタックセクション */
+.tech-stack-section {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: block;
+}
+
+/* 職務経歴の各項目が分割されないように */
+.company-section > * {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* プロジェクト詳細の項目 */
+.company-section h4 {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* テーブル全体を同じページに */
+.company-section table {
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 /* 長いコンテンツの改ページ制御 */
 blockquote {
   page-break-inside: avoid;
-  margin: 10px 0;
-  padding: 10px;
+  break-inside: avoid;
+  margin: 8px 0;
+  padding: 8px 10px;
   background-color: #f5f5f5;
-  border-left: 4px solid #ccc;
+  border-left: 4px solid #999;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* 段落の改ページ制御 */
+p {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* 表のセルが分割されないようにする */
+td, th {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* 職務経歴の各項目が分割されないように */
+.company-section > * {
+  page-break-inside: avoid;
+}
+
+/* 項目と説明の組み合わせが分割されないように */
+h4 + p, h4 + ul, h3 + p, h3 + ul, h3 + blockquote {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* 連続した項目が分割されないように */
+p + p, p + ul, ul + p, blockquote + p {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* 使用技術・ツールと担当業務セクション */
+strong {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-size: 12.5px;
+  color: #333;
+}
+strong + ul, strong + p {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin-top: 5px;
 }
 
 /* ページ余白の調整 */
