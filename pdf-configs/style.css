@@ -36,41 +36,109 @@ h2 {
   padding-bottom: 5px;
 }
 
-/* 1ページ目のセクション（基本情報、保有スキル、技術スタック） */
-h2:nth-of-type(1), h2:nth-of-type(2), h2:nth-of-type(3) {
+/* 1ページ目のセクション（基本情報） */
+h2:nth-of-type(1) {
   page-break-before: avoid;
   page-break-after: avoid;
 }
 
-/* 職務経歴詳細セクションは新しいページから開始 */
+/* コミュニティ活動セクションで改ページして新しいページを開始 */
+h2:nth-of-type(2) {
+  page-break-before: always !important;
+  page-break-after: avoid;
+  break-before: always !important;
+  break-after: avoid;
+  margin-top: 40px !important;
+  margin-bottom: 25px;
+}
+
+/* 業務外活動セクションは同じページに続ける */
+h2:nth-of-type(3) {
+  page-break-before: avoid !important;
+  page-break-after: avoid;
+  break-before: avoid !important;
+  break-after: avoid;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+/* 資格セクションも同じページに続ける */
 h2:nth-of-type(4) {
-  page-break-before: always;
-  page-break-after: avoid;
-  margin-bottom: 0;
+  page-break-before: avoid !important;
+  page-break-after: auto;
+  break-before: avoid !important;
+  break-after: auto;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
-/* 学歴詳細セクションは新しいページから開始 */
-h2:nth-of-type(5) {
-  page-break-before: always;
-  page-break-after: avoid;
-}
-
-/* 資格セクション - 学歴と同じページに */
-h2:nth-of-type(6) {
+/* コミュニティ活動セクション内容を同じページに保持（見出しは除く） */
+h2:nth-of-type(2) + p,
+h2:nth-of-type(2) ~ ul {
   page-break-before: avoid;
   page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
-/* 業務外活動セクション */
-h2:nth-of-type(7) {
-  page-break-before: avoid;
+/* 業務外活動セクション全体を同じページに保持 */
+h2:nth-of-type(3),
+h2:nth-of-type(3) + ul,
+h2:nth-of-type(3) ~ ul {
+  page-break-before: avoid !important;
   page-break-after: avoid;
+  page-break-inside: avoid;
+  break-before: avoid !important;
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+/* 資格セクション全体を同じページに保持 */
+h2:nth-of-type(4) + table {
+  page-break-before: avoid !important;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  break-before: avoid !important;
+  break-after: auto;
+  break-inside: avoid;
+}
+
+/* コミュニティ活動、業務外活動、資格のセクション内容のスペーシング調整 */
+h2:nth-of-type(2) + p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+h2:nth-of-type(2) ~ ul {
+  margin-bottom: 40px;
+}
+
+h2:nth-of-type(3) + ul {
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+h2:nth-of-type(4) + table {
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 /* 自己PRセクションは新しいページから開始 */
-h2:nth-of-type(8) {
+h2:nth-of-type(5) {
+  page-break-before: always !important;
+  page-break-after: avoid;
+  break-before: always !important;
+  break-after: avoid;
+  margin-top: 0 !important;
+  margin-bottom: 20px;
+}
+
+
+
+/* 職務経歴詳細セクションは新しいページから開始 */
+h2:nth-of-type(7) {
   page-break-before: always;
   page-break-after: avoid;
+  margin-bottom: 0;
 }
 
 /* h3要素の改ページ制御と余白調整 */
@@ -92,8 +160,11 @@ h4 {
   margin-bottom: 8px;
   font-size: 13px;
   font-weight: bold;
-  padding-left: 5px;
+  padding-left: 8px;
   border-left: 3px solid #666;
+  line-height: 1.3;
+  display: block;
+  min-height: auto;
 }
 
 /* テーブルの改ページ制御 */
@@ -116,32 +187,22 @@ li {
   margin-bottom: 3px;
 }
 
-/* 技術スタックセクション全体の改ページ制御 */
-h2:nth-of-type(3),
-h2:nth-of-type(3) ~ h3,
-h2:nth-of-type(3) ~ ul {
-  page-break-before: avoid;
-  page-break-after: avoid;
-  page-break-inside: avoid;
-  break-before: avoid;
-  break-after: avoid;
-  break-inside: avoid;
-}
+
 
 /* 技術スタックセクション全体を一つのブロックとして扱う */
-h2:nth-of-type(3) {
-  page-break-after: avoid;
-  break-after: avoid;
+h2:nth-of-type(6) {
+  page-break-after: avoid !important;
+  break-after: avoid !important;
 }
 
 /* 技術スタックセクション内のリストを一つのブロックとして扱う */
-h2:nth-of-type(3) ~ h3 + ul {
-  page-break-before: avoid;
-  page-break-after: avoid;
-  page-break-inside: avoid;
-  break-before: avoid;
-  break-after: avoid;
-  break-inside: avoid;
+h2:nth-of-type(6) ~ h3 + ul {
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  page-break-inside: avoid !important;
+  break-before: avoid !important;
+  break-after: avoid !important;
+  break-inside: avoid !important;
 }
 
 /* 特にインフラとツールのセクションが分断されないように */
@@ -174,8 +235,22 @@ h3:nth-of-type(5) + ul {
 .no-break-group {
   page-break-inside: avoid !important;
   break-inside: avoid !important;
-  display: inline-block;
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  break-before: avoid !important;
+  break-after: avoid !important;
+  display: block;
   width: 100%;
+}
+
+/* no-break-group内の全ての要素 */
+.no-break-group * {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  break-before: avoid !important;
+  break-after: avoid !important;
 }
 
 table {
@@ -217,8 +292,8 @@ hr {
   break-inside: avoid;
   page-break-after: always;
   break-after: always;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 30px;
+  padding: 25px 0;
 }
 
 /* 最初の会社セクションは「職務経歴詳細」見出しの後に続けて表示 */
@@ -233,11 +308,35 @@ hr {
   break-before: always;
 }
 
-/* 技術スタックセクション */
+/* 技術スタックセクション - 最強の改ページ制御 */
 .tech-stack-section {
-  page-break-inside: avoid;
-  break-inside: avoid;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  break-before: avoid !important;
+  break-after: avoid !important;
   display: block;
+  overflow: visible;
+  contain: layout;
+}
+
+/* 技術スタックセクション内の全ての要素 */
+.tech-stack-section * {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  break-before: avoid !important;
+  break-after: avoid !important;
+}
+
+/* 技術スタックセクション全体を一つのフレックスコンテナとして扱う */
+.tech-stack-section {
+  display: flex !important;
+  flex-direction: column !important;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
 }
 
 /* 職務経歴の各項目が分割されないように */
@@ -250,6 +349,13 @@ hr {
 .company-section h4 {
   page-break-after: avoid;
   break-after: avoid;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-left: 8px;
+  border-left: 3px solid #666;
+  line-height: 1.3;
+  display: block;
+  min-height: auto;
 }
 
 /* テーブル全体を同じページに */
@@ -327,4 +433,186 @@ strong + ul, strong + p {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+}
+/* コミュニティ活動ページの均等配置 */
+h2:nth-of-type(2),
+h2:nth-of-type(3),
+h2:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ページ内での垂直方向の配置調整 */
+h2:nth-of-type(2) {
+  padding-top: 20px;
+}
+
+/* 各セクション間の均等な間隔 */
+h2:nth-of-type(2) + p,
+h2:nth-of-type(2) ~ ul,
+h2:nth-of-type(3) + ul,
+h2:nth-of-type(4) + table {
+  flex-grow: 1;
+}
+
+/* リストアイテムの間隔調整 */
+h2:nth-of-type(2) ~ ul li,
+h2:nth-of-type(3) + ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* 資格テーブルの行間調整 */
+h2:nth-of-type(4) + table td,
+h2:nth-of-type(4) + table th {
+  padding: 10px 8px;
+  line-height: 1.4;
+}/* 参画案件2、3で改ページ */
+.page-break-before {
+  page-break-before: always !important;
+  break-before: always !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0;
+}
+
+.page-break-before h4 {
+  margin-top: 0 !important;
+  padding-top: 20px;
+  padding-left: 8px;
+  border-left: 3px solid #666;
+  line-height: 1.3;
+  display: block;
+  min-height: auto;
+}/* 職務経歴セクショ
+ンの詳細なスペーシング調整 */
+.company-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.company-section blockquote {
+  margin: 15px 0 25px 0;
+  padding: 12px 15px;
+  line-height: 1.6;
+}
+
+.company-section h4 + table {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.company-section table + p {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.company-section strong {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.company-section strong + p,
+.company-section strong + ul {
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.company-section ul {
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.company-section li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+/* 参画案件間のスペーシング */
+.company-section h4:not(:first-of-type) {
+  margin-top: 35px;
+}
+
+/* 会社名見出しの調整 */
+.company-section > h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* テーブル内のセルのパディング調整 */
+.company-section table td,
+.company-section table th {
+  padding: 8px 10px;
+  line-height: 1.4;
+}
+
+/* 使用技術・ツールセクションの調整 */
+.company-section p:has(strong) {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+/* 技術スタッ
+ク専用の超強力な改ページ制御 */
+.tech-stack-section h2,
+.tech-stack-section h3:nth-of-type(1), /* 言語 */
+.tech-stack-section h3:nth-of-type(1) + ul,
+.tech-stack-section h3:nth-of-type(2), /* フレームワーク */
+.tech-stack-section h3:nth-of-type(2) + ul,
+.tech-stack-section h3:nth-of-type(3), /* データベース */
+.tech-stack-section h3:nth-of-type(3) + ul,
+.tech-stack-section .no-break-group,
+.tech-stack-section .no-break-group h3,
+.tech-stack-section .no-break-group ul {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  break-before: avoid !important;
+  break-after: avoid !important;
+  orphans: 10 !important;
+  widows: 10 !important;
+}
+
+/* 技術スタックセクション全体のコンテナ設定 */
+.tech-stack-section {
+  min-height: fit-content !important;
+  height: auto !important;
+  overflow: visible !important;
+}/
+* 技術スタック用テーブルの特別なスタイル */
+.tech-stack-section table {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  border: none !important;
+  border-collapse: separate !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.tech-stack-section table td {
+  border: none !important;
+  padding: 0 15px 0 0 !important;
+  vertical-align: top !important;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.tech-stack-section table tr {
+  border: none !important;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.tech-stack-section table h3 {
+  border-bottom: 1px dotted #666;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.tech-stack-section table ul {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }

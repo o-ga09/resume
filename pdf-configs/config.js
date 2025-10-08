@@ -26,7 +26,7 @@ module.exports = {
   }
 </style>
 <div class="header">
-  <span>生成日: ${currentDate}</span>
+  <span>作成日: ${currentDate}</span>
 </div>`,
     footerTemplate: `<style>
   .footer {
