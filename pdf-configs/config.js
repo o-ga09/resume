@@ -3,10 +3,6 @@ const currentDate = new Date().toLocaleDateString("ja-JP");
 module.exports = {
   stylesheet: "./pdf-configs/style.css",
   body_class: "markdown-body",
-  launch_options: {
-    executablePath:
-      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-  },
   marked_options: {
     headerIds: false,
     smartypants: true,
