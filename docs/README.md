@@ -4,15 +4,56 @@
 
 ## 基本情報
 
-| key         | value                                         |
-| ----------- | --------------------------------------------- |
-| 氏名        | 阿部太一                                      |
-| 生年月日    | 1997.09.27                                    |
-| Twitter     | [@o_ga09](https://x.com/o_ga09)               |
-| Qiita       | [@o-ga](https://qiita.com/o-ga)               |
-| note        | [o-ga9927](https://note.com/large_walrus7244) |
-| Zenn        | [@o_ga](https://zenn.dev/o_ga)                |
-| SpeakerDeck | [@tabe](https://speakerdeck.com/tabe)         |
+### 氏名: 阿部太一
+
+### 性別: 男
+
+### 生年月日: 1997.09.27
+
+### 卒業大学: 会津大学コンピュータ理工学部コンピュータ理工学科
+
+### 卒業年度: 2020 年 4 月
+
+### 出身地: 新潟
+
+### 国籍: 日本
+
+### 連絡先
+
+- Twitter: [@o_ga09](https://x.com/o_ga09)
+- Qiita: [@o-ga](https://qiita.com/o-ga)
+- note: [o-ga9927](https://note.com/large_walrus7244)
+- Zenn: [@o_ga](https://zenn.dev/o_ga)
+- SpeakerDeck: [@tabe](https://speakerdeck.com/tabe)
+- GitHub: [@o-ga](https://github.com/o-ga09)
+
+---
+
+## コミュニティ活動
+
+外部・内部問わず LT 登壇や勉強会主催を積極的に実施。グループ会社横断の技術イベント企画など、技術コミュニティ活動にも注力している。
+
+- **アウトプット活動**
+- **Go コミュニティへの積極的な参加**
+- **LT 会への積極的な登壇**
+
+## 業務外活動
+
+- [Brighty](https://www.brighty.site/)
+  - コーチングプラットフォーム「Brighty」へのボランティでの参加
+  - Ruby x Next.js の個人開発プロダクト
+
+---
+
+## 自己 PR
+
+- **Go 言語への取り組み**
+
+2018 年頃に Go に出会い、2021 年頃から本格的に学習を開始。Cobra（CLI ツール作成）、Gin（WebAPI 開発）、Ebitengine（2D ゲーム開発）など、Go の主要な用途において幅広く開発経験を積む。GoConference2024 への参加を通じて、継続的にスキル向上に取り組んでいる。
+
+- **開発プロセス改善への貢献**
+
+業務では開発だけでなく、CLI ツールによるタスク効率化や Scenarigo による E2E テスト導入を実施。CI/CD や IaC の構築、リファクタリングにも知見があり、開発プロセス全体の改善に貢献可能。
 
 ---
 
@@ -94,9 +135,11 @@ AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellsc
 
 ### 株式会社ワクト（2022/10〜現在）
 
+> 自社では、グループ横断のテックイベントの運営や勉強会、社内 LT 会の主催に注力する。Qiita アドベントカレンダーの呼びかけ、社内イベントとしての BeerBash の企画を実施。
+
 #### 参画案件
 
-> バックエンドエンジニアとして、Node.js x AWS の Web システムの保守や不動産の自社システムの Go x React x AWS のリプレイス案件に参画。自社では、グループ横断のテックイベントの運営や勉強会、社内 LT 会の主催に注力する。
+> バックエンドエンジニアとして、Node.js x AWS の Web システムの保守や不動産の自社システムの Go x React x AWS のリプレイス案件に参画。
 
 **不動産社内システムのリプレイス**
 
@@ -104,14 +147,14 @@ AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellsc
 | ---------------- | ----------------------------------------------- |
 | 作業行程         | 開発／保守／開発プロセス改善                    |
 | プロジェクト規模 | プロダクトメンバー 20 人（チームメンバー 6 人） |
-| 開発手法         | ウォーターフォール            |
+| 開発手法         | ウォーターフォール                              |
 
 **使用技術・ツール**
 Go、React、GitHub Actions、AWS（EKS on Fargate、AmazonAurora for PostgeSQL）
 
 **担当業務**
 
-- 契約周りのAPIの実装、修正、バグ対応
+- 契約周りの API の実装、修正、バグ対応
 - 契約周りの画面の実装、修正、バグ対応
 
 **建設業界向けグリーンファイル作成サポート SaaS のデータ連携 API 開発・保守**
@@ -169,23 +212,3 @@ C、Eclipse、C++TEST、VirtualBOX
 | AWS Certified Solutions Architect Associate | 2025 年 | AWS アーキテクチャ設計の専門知識を証明             |
 | AWS Certified Developer Associate           | 2024 年 | AWS アプリケーション開発の専門知識を証明           |
 | AWS Certified Cloud Practitioner            | 2023 年 | AWS の基本サービスとクラウドコンセプトの知識を証明 |
-
-## 業務外活動
-
-- Brighty
-
-## 自己 PR
-
-**Go 言語への取り組み**
-2018 年頃に Go に出会い、2021 年頃から本格的に学習を開始。Cobra（CLI ツール作成）、Gin（WebAPI 開発）、Ebitengine（2D ゲーム開発）など、Go の主要な用途において幅広く開発経験を積む。GoConference2024 への参加を通じて、継続的にスキル向上に取り組んでいる。
-
-**開発プロセス改善への貢献**
-業務では開発だけでなく、CLI ツールによるタスク効率化や Scenarigo による E2E テスト導入を実施。CI/CD や IaC の構築、リファクタリングにも知見があり、開発プロセス全体の改善に貢献可能。
-
-**技術スキル**
-
-- 好きな標準パッケージ：net/http
-- your work for gophers スキルレベル：レベル 3
-
-**アウトプット活動**
-外部・内部問わず LT 登壇や勉強会主催を積極的に実施。グループ会社横断の技術イベント企画など、技術コミュニティ活動にも注力している。
