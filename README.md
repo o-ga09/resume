@@ -1,15 +1,15 @@
 # Taichi Abe 's resume
 
-![textlint](https://img.shields.io/github/workflow/status/kawamataryo/resume/lint%20text?label=textlint&logo=github&color=yellow)
-![build pdf](https://img.shields.io/github/workflow/status/kawamataryo/resume/build-pdf?label=build%20pdf&logo=github)
-![create issue](https://img.shields.io/github/workflow/status/kawamataryo/resume/create%20issue?label=create%20issue&logo=github&color=orange)
-![release date](https://img.shields.io/github/release-date/kawamataryo/resume?color=blue&logo=github)
+![textlint](https://img.shields.io/github/actions/workflow/status/o-ga09/resume/lint-text.yml?branch=main&label=textlint&logo=github&color=yellow)
+![build pdf](https://img.shields.io/github/actions/workflow/status/o-ga09/resume/build-pdf.yml?label=build%20pdf&logo=github)
+![create issue](https://img.shields.io/github/actions/workflow/status/o-ga09/resume/create-issue.yml?label=create%20issue&logo=github&color=orange)
+![release date](https://img.shields.io/github/release-date/o-ga09/resume?color=blue&logo=github)
 
 [ [English](https://github.com/o-ga09/resume) | 日本語 ]
 
 - [GitHub Pages](https://o-ga09.github.io/resume/)
 - [PDF](https://github.com/o-ga09/resume/releases)
-- [File](https://github.com/o-ga09/resume/blob/master/docs/README.md)
+- [File](https://github.com/o-ga09/resume/blob/main/docs/README.md)
 
 ## Features
 
@@ -18,7 +18,7 @@
 Automatic proofreading with [textlint](https://github.com/textlint/textlint).
 
 ```
-$ yarn lint --fix
+$ pnpm lint --fix
 ```
 
 It is also automatically executed when pre-commit by [husky](https://github.com/typicode/husky).  
@@ -29,7 +29,7 @@ proofreading rules are set with `.textlintrc`.
 You can generate PDF with [md-to-pdf](https://www.npmjs.com/package/md-to-pdf).
 
 ```
-$ yarn build:pdf
+$ pnpm build:pdf
 ```
 
 The output PDF can be styled as you like with CSS. Edit the `pdf-configs/style.css`.
