@@ -37,9 +37,14 @@
     - [Go 言語でつくる REST API 開発 2024 年版](https://zenn.dev/o_ga/books/dc6c7b055b65a3)がいいね 327 獲得
 - **Go コミュニティへの積極的な参加**
   - 各種勉強会への参加
-  - Go Conference 2025 へのスタッフとしての参加
+  - Go Conference 2026 へのコアスタッフとしての参加
+  - Go Conference 2025 への当日スタッフとしての参加
+- **Hono コミュニティへの参加**
+  - Hono Conference 2026 への当日スタッフとしての参加
+  - Hono Conference 2025 への当日スタッフとしての参加
 - **LT 会への積極的な登壇**
   - connpass での公募型 LT への積極的な登壇
+  - Go Conference mini in Sendai 2026 で LT 登壇（[資料](https://speakerdeck.com/tabe/goconferencemini2026insendai-2026-dot-02-dot-21)）
 
 ## 業務外活動
 
@@ -51,6 +56,7 @@
 
 | 資格名                                      | 取得年  | 概要                                               |
 | ------------------------------------------- | ------- | -------------------------------------------------- |
+| AWS Certified Solutions Architect Professional | 2026 年 | AWS アーキテクチャ設計の高度な専門知識を証明    |
 | AWS Certified Solutions Architect Associate | 2025 年 | AWS アーキテクチャ設計の専門知識を証明             |
 | AWS Certified Developer Associate           | 2024 年 | AWS アプリケーション開発の専門知識を証明           |
 | AWS Certified Cloud Practitioner            | 2023 年 | AWS の基本サービスとクラウドコンセプトの知識を証明 |
@@ -63,7 +69,15 @@
 
   - 2018 年頃に Go に出会い、2021 年頃から本格的に学習を開始
   - Cobra（CLI ツール作成）、Gin（Web API 開発）、Ebitengine（2D ゲーム開発）など Go の主要な用途において幅広く開発経験を積む
-  - GoConference2024 への参加、Go Conference 2025 へのスタッフ参加を通じて、継続的にスキル向上に取り組んでいる
+  - GoConference2024 への参加、Go Conference 2025 への当日スタッフ参加を通じて、継続的にスキル向上に取り組んでいる
+  - Go Conference 2026 ではコアスタッフを務め、Go Conference mini in Sendai 2026 では LT に登壇
+
+- **AI エージェント開発への先行的な取り組み**
+
+  - Go + Firebase Genkit で AI エージェントを実装し、Agentic AI Hackathon with Google Cloud に提出
+  - 提出作は旅行の写真・動画から AI が感情的なショート Vlog を自動生成する Web アプリ「Tavinikkiy」。BE は Go 1.25 / Echo / GORM のクリーンアーキテクチャ構成
+  - Agent Development Kit（ADK）を用いた Gmail/Calendar 連携エージェントの個人開発（`adk-go-sample`）など、AI をプロダクトに組み込む実装を継続的に検証
+  - 自作 REST API「MH-API」を Model Context Protocol（MCP）対応まで拡張し公開（mh-api.com）
 
 - **開発プロセス改善への貢献**
 
@@ -133,34 +147,6 @@
 
 <div class="company-section first-company" markdown="1">
 
-### アイテル株式会社（2020/4〜2022/9）
-
-> システムエンジニアとして、金融業界がメインの SES 企業に新卒で入社。マーケティングオートメーションツールのシステム保守に従事。一部、開発工程において結合テスト／システムテストでのテストシナリオの策定、実施を担当。
-
-#### 参画案件 1
-
-**大手クレジットカード発行会社向け MarketingAutomation のシステム保守および機能追加**
-
-| 項目             | 内容                                                  |
-| ---------------- | ----------------------------------------------------- |
-| 作業行程         | 要件定義/基本設計/詳細設計/開発/結合テスト/総合テスト |
-| プロジェクト規模 | チームメンバー 7 人                                   |
-| 開発手法         | ウォータフォール                                      |
-
-**使用技術・ツール**
-AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellscript、JavaScript、ExcelVBA
-
-**担当業務**
-
-- サーバ内ファイルを自動削除するシェルスクリプトの設計、作成
-- SQL を用いた業務ロジックの作成、性能改善
-- 保守定常作業（監視等）、アラート対応
-- MA ツールにおける機能追加のテスト
-
-</div>
-
-<div class="company-section" markdown="1">
-
 ### 株式会社ワクト（2022/10〜現在）
 
 > 自社では、グループ横断のテックイベントの運営や勉強会、社内 LT 会の主催に注力する。Qiita アドベントカレンダーの呼びかけ、社内イベントとしての BeerBash の企画を実施。
@@ -204,15 +190,18 @@ Express、React、GitHub Actions、AWS（ECS on Fargate、APIGateway、Lambda、
 
 **担当業務**
 
+- 多段 API Gateway 構成のレイテンシ・コスト増に対する段階的なリアーキテクチャを主導し、DB スペック改善・不使用環境の自動停止と合わせて半年で約 50％のインフラコスト削減を実現
 - API の E2E シナリオテストの導入
 - Typeorm の破壊的変更を伴うバージョンアップ対応
-- バッチの不具合改修、node の脆弱性対応
+- バッチの不具合改修、node の脆弱性対応（AWS Inspector 検出の既知脆弱性をバージョンアップ・動作確認で解消）
 - リリース時エラーの横展開対応
 - セキュリティチームからの依頼対応、API 実装
 
 <div class="page-break-before" markdown="1">
 
 #### 参画案件 3
+
+</div>
 
 **宇宙・防衛分野における組み込みシステムの開発およびテスト**
 
@@ -232,6 +221,36 @@ C、Eclipse、C++TEST、VirtualBOX
 - 詳細設計書のたたき台作成・レビュー指摘修正
 - コーディング（流用元プログラムの改修）・レビュー指摘修正
 - ユニットテスト仕様書作成・実施
+
+</div>
+
+<div class="company-section" markdown="1">
+
+### アイテル株式会社（2020/4〜2022/9）
+
+> システムエンジニアとして、金融業界がメインの SES 企業に新卒で入社。マーケティングオートメーションツールのシステム保守に従事。一部、開発工程において結合テスト／システムテストでのテストシナリオの策定、実施を担当。
+
+#### 参画案件 1
+
+**大手クレジットカード発行会社向け MarketingAutomation のシステム保守および機能追加**
+
+| 項目             | 内容                                                  |
+| ---------------- | ----------------------------------------------------- |
+| 作業行程         | 要件定義/基本設計/詳細設計/開発/結合テスト/総合テスト |
+| プロジェクト規模 | チームメンバー 7 人                                   |
+| 開発手法         | ウォータフォール                                      |
+
+**使用技術・ツール**
+AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellscript、JavaScript、ExcelVBA
+
+**担当業務**
+
+- サーバ内ファイルを自動削除するシェルスクリプトの設計、作成
+- SQL を用いた業務ロジックの作成、性能改善
+- 保守定常作業（監視等）、アラート対応
+- MA ツールにおける機能追加のテスト
+
+</div>
 
 ## 学歴詳細
 
