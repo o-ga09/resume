@@ -106,7 +106,6 @@
 
 - Go
 - TypeScript
-- C++
 - C
 
 ### フレームワーク・その他
@@ -153,18 +152,36 @@
 
 #### 参画案件 1
 
+**社内新規事業の PoC 開発（兼務）**
+
+> 社内新規事業の PoC 版プロダクトを開発。社内の利用部門での検証に向けて、技術構築と PO との要件すり合わせを担当。
+
+| 項目     | 内容                  |
+| -------- | --------------------- |
+| 参画期間 | 2026〜現在            |
+| 作業行程 | 要件定義/設計/開発    |
+
+**担当業務**
+
+- PoC の技術構築（設計・技術選定）
+- PO との要件すり合わせ
+- 社内ユーザーのフィードバックを反映した改善
+
+#### 参画案件 2
+
 **不動産社内システムのリプレイス**
 
 > バックエンドエンジニアとして、Node.js x AWS の Web システムの保守や不動産の自社システムの Go x React x AWS のリプレイス案件に参画。
 
 | 項目             | 内容                                            |
 | ---------------- | ----------------------------------------------- |
+| 参画期間         | 2025/1〜現在（1 年 9 ヶ月）                     |
 | 作業行程         | 開発／保守／開発プロセス改善                    |
 | プロジェクト規模 | プロダクトメンバー 20 人（チームメンバー 6 人） |
 | 開発手法         | ウォーターフォール                              |
 
 **使用技術・ツール**
-Go、React、GitHub Actions、AWS（EKS on Fargate、AmazonAurora for PostgeSQL）
+Go、TypeScript、Echo、React、GoLand、VSCode、Docker、GitHub Actions、AWS（EKS on Fargate、AmazonAurora for PostgeSQL）
 
 **担当業務**
 
@@ -173,7 +190,7 @@ Go、React、GitHub Actions、AWS（EKS on Fargate、AmazonAurora for PostgeSQL�
 
 <div class="page-break-before" markdown="1">
 
-#### 参画案件 2
+#### 参画案件 3
 
 </div>
 
@@ -181,12 +198,13 @@ Go、React、GitHub Actions、AWS（EKS on Fargate、AmazonAurora for PostgeSQL�
 
 | 項目             | 内容                                            |
 | ---------------- | ----------------------------------------------- |
+| 参画期間         | 2023/10〜2024/12（1 年 3 ヶ月）                 |
 | 作業行程         | 開発／保守／開発プロセス改善                    |
 | プロジェクト規模 | プロダクトメンバー 20 人（チームメンバー 6 人） |
 | 開発手法         | アジャイル開発（2 週間スプリント）              |
 
 **使用技術・ツール**
-Express、React、GitHub Actions、AWS（ECS on Fargate、APIGateway、Lambda、Stepfunction、AmazonAurora for MySQL）
+Express、Node.js、React、VSCode、Docker、CircleCI、GitHub Actions、AWS（ECS on Fargate、APIGateway、Lambda、Stepfunction、AmazonAurora for MySQL）
 
 **担当業務**
 
@@ -199,7 +217,7 @@ Express、React、GitHub Actions、AWS（ECS on Fargate、APIGateway、Lambda、
 
 <div class="page-break-before" markdown="1">
 
-#### 参画案件 3
+#### 参画案件 4
 
 </div>
 
@@ -207,12 +225,13 @@ Express、React、GitHub Actions、AWS（ECS on Fargate、APIGateway、Lambda、
 
 | 項目             | 内容                         |
 | ---------------- | ---------------------------- |
+| 参画期間         | 2022/10〜2023/9（1 年 0 ヶ月） |
 | 作業行程         | 製造/詳細設計/ユニットテスト |
 | プロジェクト規模 | チームメンバー 7 人          |
 | 開発手法         | ウォータフォール             |
 
 **使用技術・ツール**
-C、Eclipse、C++TEST、VirtualBOX
+C、Eclipse、C++TEST、TeraTerm、VirtualBOX、Windows10、Linux（CentOS7）
 
 **担当業務**
 
@@ -236,12 +255,13 @@ C、Eclipse、C++TEST、VirtualBOX
 
 | 項目             | 内容                                                  |
 | ---------------- | ----------------------------------------------------- |
+| 参画期間         | 2020/9〜2022/9（2 年 1 ヶ月）                         |
 | 作業行程         | 要件定義/基本設計/詳細設計/開発/結合テスト/総合テスト |
 | プロジェクト規模 | チームメンバー 7 人                                   |
 | 開発手法         | ウォータフォール                                      |
 
 **使用技術・ツール**
-AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellscript、JavaScript、ExcelVBA
+AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellscript、JavaScript、ExcelVBA、Windows10、Linux（RHEL）
 
 **担当業務**
 
@@ -249,11 +269,15 @@ AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellsc
 - SQL を用いた業務ロジックの作成、性能改善
 - 保守定常作業（監視等）、アラート対応
 - MA ツールにおける機能追加のテスト
+- システム保守の補助ツール作成
+- インシデント対応、情報採取、顧客報告
+- 週次の作業報告書、プロジェクト資料の作成
+- 小規模な新規開発案件の顧客説明、工程管理、ドキュメント作成
 
 </div>
 
 ## 学歴詳細
 
-### 会津大学 コンピュータサイエンス学部（2016/4 〜 2020/3）
+### 会津大学 コンピュータ理工学部 コンピュータ理工学科（2016/4 〜 2020/3）
 
 > プログラミングやデータベース、ネットワークなどの基礎を学習。卒業研究ではブロックチェーンを用いたアプリケーション開発に取り組む。
