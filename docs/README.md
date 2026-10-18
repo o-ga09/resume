@@ -84,6 +84,10 @@
 
 ## 技術スタック
 
+<table style="border: none;">
+<tr>
+<td style="border: none; vertical-align: top; width: 50%;" markdown="1">
+
 ### 言語
 
 - Go
@@ -99,7 +103,7 @@
 - Express
 
 </td>
-<td style="border: none; vertical-align: top; width: 50%;">
+<td style="border: none; vertical-align: top; width: 50%;" markdown="1">
 
 ### データベース
 
@@ -127,7 +131,7 @@
 
 ## 職務経歴詳細
 
-<div class="company-section first-company">
+<div class="company-section first-company" markdown="1">
 
 ### アイテル株式会社（2020/4〜2022/9）
 
@@ -155,7 +159,7 @@ AdobeCampaign、PostgreSQL、Oracle19c、HULFT、Azure、Apache、Bash、shellsc
 
 </div>
 
-<div class="company-section">
+<div class="company-section" markdown="1">
 
 ### 株式会社ワクト（2022/10〜現在）
 
@@ -181,7 +185,7 @@ Go、React、GitHub Actions、AWS（EKS on Fargate、AmazonAurora for PostgeSQL�
 - 契約周りの API の実装、修正、バグ対応
 - 契約周りの画面の実装、修正、バグ対応
 
-<div class="page-break-before">
+<div class="page-break-before" markdown="1">
 
 #### 参画案件 2
 
@@ -206,7 +210,7 @@ Express、React、GitHub Actions、AWS（ECS on Fargate、APIGateway、Lambda、
 - リリース時エラーの横展開対応
 - セキュリティチームからの依頼対応、API 実装
 
-<div class="page-break-before">
+<div class="page-break-before" markdown="1">
 
 #### 参画案件 3
 
