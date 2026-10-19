@@ -49,7 +49,6 @@
 ## 業務外活動
 
 - [Brighty](https://www.brighty.site/)
-  - コーチングプラットフォーム「Brighty」へのボランティでの参加
   - Ruby x Next.js の個人開発プロダクト
 
 ## 資格
@@ -75,13 +74,13 @@
 - **AI エージェント開発への先行的な取り組み**
 
   - Go + Firebase Genkit で AI エージェントを実装し、Agentic AI Hackathon with Google Cloud に提出
-  - 提出作は旅行の写真・動画から AI が感情的なショート Vlog を自動生成する Web アプリ「Tavinikkiy」。BE は Go 1.25 / Echo / GORM のクリーンアーキテクチャ構成
+  - 提出作は旅行の写真・動画から AI が感情的なショート Vlog を自動生成する Web アプリ「[Tavinikkiy](https://tavinikkiy.com)」。BE は Go 1.25 / Echo / GORM のクリーンアーキテクチャ構成
   - Agent Development Kit（ADK）を用いた Gmail/Calendar 連携エージェントの個人開発（`adk-go-sample`）など、AI をプロダクトに組み込む実装を継続的に検証
   - 自作 REST API「MH-API」を Model Context Protocol（MCP）対応まで拡張し公開（mh-api.com）
 
 - **開発プロセス改善への貢献**
 
-  - 業務では開発だけでなく、CLI ツールによるタスク効率化や Scenarigo による E2E テスト導入を実施。CI/CD や IaC の構築、リファクタリングにも知見があり、開発プロセス全体の改善に貢献可能
+  - 業務では開発だけでなく、CLI ツールによるタスク効率化や Scenarigo による E2E テスト導入を実施。CI/CD の構築、リファクタリングにも知見があり、開発プロセス全体の改善に貢献可能
 
 - **社内イベントの企画**
 
@@ -165,7 +164,8 @@
 
 - PoC の技術構築（設計・技術選定）
 - PO との要件すり合わせ
-- 社内ユーザーのフィードバックを反映した改善
+- 社内ユーザーの検証に向けた PoC の構築
+- Claude Agent SDK と Amazon Bedrock AgentCore Runtime を用い、フロントエンド・バックエンド・AI エージェントを TypeScript で統一して構築
 
 #### 参画案件 2
 
@@ -185,8 +185,12 @@ Go、TypeScript、Echo、React、GoLand、VSCode、Docker、GitHub Actions、AWS
 
 **担当業務**
 
-- 契約周りの API の実装、修正、バグ対応
+- 契約周り（5 機能・約 10 画面）の API の実装、修正、バグ対応
 - 契約周りの画面の実装、修正、バグ対応
+- 要件がスプレッドシートのメモのみのチケットから仕様を起こし、複雑な業務ルールはフローチャートで Confluence に記事化してチームに共有
+- テストを厚くしたい場面で、リーダーに自ら相談して定期リリースを 1 週間延期
+- Go のバージョンアップを直近 3 回、調査・実装・テストまで担当し、調査内容を記事化して Slack で共有
+- AI を用いた実装の効率化に向けた、OpenAPI（OAS）による IF 定義と仕様書の整備の提案（継続中）
 
 <div class="page-break-before" markdown="1">
 
@@ -208,11 +212,12 @@ Express、Node.js、React、VSCode、Docker、CircleCI、GitHub Actions、AWS（
 
 **担当業務**
 
-- 多段 API Gateway 構成のレイテンシ・コスト増に対する段階的なリアーキテクチャに参画。DB スペック改善・不使用環境の自動停止・RI の最適化などチームの複合施策により、半年で約 50％のインフラコストを削減（自身はリアーキテクチャへの参画と E2E シナリオテストの自動化で貢献）
-- API の E2E シナリオテストの導入
+- 多段構成（顧客システム向け API Gateway ＋ 内部 BFF 用 API Gateway ＋ ECS、NLB）のレイテンシ・コスト増に対し、内部 BFF 用 API Gateway を廃止して ALB ＋ ECS（パスベースルーティング）へ移行するリアーキテクチャに参画
+  - 担当：アプリケーション側のテスト・動作確認・リリース・移行検証
+- DB スペック改善・不使用環境の自動停止・RI の最適化などチームの複合施策により、半年で約 50％のインフラコストを削減（自身はアプリケーション側のテスト・移行検証と E2E シナリオテストの自動化で貢献）
+- API の E2E シナリオテストの導入（確認作業を仕様書作成〜実施込みで 3 時間から 1 時間に短縮）
 - Typeorm の破壊的変更を伴うバージョンアップ対応
 - バッチの不具合改修、node の脆弱性対応（AWS Inspector 検出の既知脆弱性をバージョンアップ・動作確認で解消）
-- リリース時エラーの横展開対応
 - セキュリティチームからの依頼対応、API 実装
 
 <div class="page-break-before" markdown="1">
